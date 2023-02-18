@@ -16,6 +16,12 @@ button {
   cursor: pointer;
 }
 
+@media screen and (min-height: 700px) {
+  .start_btn {
+    margin-top: 250px;
+  }
+}
+
 .game {
   background: #000033;
   height: 100vh;
@@ -48,6 +54,16 @@ button {
 .intro > .text-animate {
   font-size: 50px;
 }
+@media screen and (max-width: 599px) {
+  .intro > .text-animate {
+    font-size: 29px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .intro > .text-animate {
+    font-size: 22px;
+  }
+}
 .intro > .text-animate > .char {
   display: inline-block;
   transition: all 1.5s linear;
@@ -76,10 +92,20 @@ button {
   transform: translate(-50%, -50%);
   transition: all 0.5s ease 0.5s;
 }
+@media screen and (max-width: 300px) {
+  .match {
+    width: 100%;
+  }
+}
 .match > .winner {
   text-align: center;
   font-size: 40px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 599px) {
+  .match > .winner {
+    margin-top: 100px;
+  }
 }
 .match > .hand {
   display: flex;
@@ -88,6 +114,26 @@ button {
 }
 .match > .hand > .player_hand {
   transform: rotateY(180deg);
+}
+@media screen and (max-width: 599px) {
+  .match > .hand > .player_hand {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .match > .hand > .player_hand {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .match > .hand > .computer_hand {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .match > .hand > .computer_hand {
+    width: 120px;
+  }
 }
 
 .options {

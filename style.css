@@ -21,6 +21,11 @@ button {
     margin-top: 250px;
   }
 }
+@media screen and (min-height: 1000px) {
+  .start_btn {
+    margin-top: 360px;
+  }
+}
 
 .game {
   background: #000033;

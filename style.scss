@@ -16,6 +16,11 @@ button {
     cursor: pointer;
     // margin-top: 30px;
 }
+.start_btn  {
+    @media screen and (min-height:700px) {
+        margin-top: 250px;
+    }
+}
 .game {
     background: #000033;
     height: 100vh;
@@ -48,6 +53,12 @@ button {
     
     & > .text-animate {
         font-size: 50px;
+        @media screen and (max-width:599px) {
+            font-size: 29px;
+        }
+        @media screen and (max-width:300px) {
+            font-size: 22px;
+        }
         & > .char {
             display:inline-block;
             transition: all 1.5s linear;
@@ -79,11 +90,17 @@ button {
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all .5s ease  .5s;
-
+    @media screen and (max-width:300px) {
+        width: 100%;
+    }
     & > .winner {
         text-align: center;
         font-size: 40px;
         margin-bottom: 30px;
+        @media screen and (max-width:599px) {
+            margin-top: 100px;
+        }
+    
     }
     & > .hand {
         display: flex;
@@ -91,7 +108,22 @@ button {
         justify-content: space-around;
         & > .player_hand {
             transform: rotateY(180deg);
+            @media screen and (max-width:599px) {
+                width: 180px;
+            }
+            @media screen and (max-width:300px) {
+                width: 120px;
+            }
         
+      }
+      & > .computer_hand {
+        @media screen and (max-width:599px) {
+            width: 180px;
+        }
+        @media screen and (max-width:300px) {
+            width: 120px;
+        }
+
       }
 
     }

@@ -18,13 +18,19 @@ button {
 
 @media screen and (min-height: 700px) {
   .start_btn {
-    margin-top: 250px;
+    margin-top: 200px;
   }
 }
 @media screen and (min-height: 1000px) {
   .start_btn {
     margin-top: 360px;
   }
+}
+
+.btns {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .game {
@@ -48,7 +54,7 @@ button {
 }
 
 .intro {
-  margin-top: 120px;
+  margin-top: 110px;
   height: 30vh;
   display: flex;
   flex-direction: column;
@@ -107,7 +113,6 @@ button {
   font-size: 40px;
   margin-bottom: 30px;
 }
-
 .match > .hand {
   display: flex;
   align-items: center;
@@ -146,13 +151,58 @@ button {
   margin-top: 50px;
 }
 
+.finish {
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+  background: #b1b1b1;
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 599px) {
+  .finish {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .finish {
+    width: 600px;
+    height: 600px;
+  }
+}
+.finish_title {
+  font-size: 50px;
+}
+@media screen and (max-width: 599px) {
+  .finish_title {
+    font-size: 30px;
+  }
+}
+.finish_name {
+  font-size: 50px;
+}
+@media screen and (max-width: 599px) {
+  .finish_name {
+    font-size: 20px;
+  }
+}
+
 .fade_out {
   opacity: 0;
   pointer-events: none;
 }
 
 .fade_in {
-  z-index: 0;
+  z-index: 2;
   opacity: 1;
   pointer-events: all;
 }

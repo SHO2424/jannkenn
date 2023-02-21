@@ -203,14 +203,14 @@ const dofinish= () => {
         setTimeout(()=> {
             finish.classList.add("fade_in");
             finishname.textContent="あんたの勝ちだよ！";
-        },600);
+        },601);
     }
     if(Cscore === 5) { 
     match.classList.remove("fade_in");
     setTimeout(()=> {
         finish.classList.add("fade_in");
         finishname.textContent="出直してきな！";
-    },600);
+    },601);
     }
 
 };

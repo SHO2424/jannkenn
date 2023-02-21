@@ -56,7 +56,7 @@ option.addEventListener("click", function() {
     
     setTimeout(() => {
         dofinish();
-     },2000);
+     },1350);
     
     computerhand.style.animation ="computer-animation 1.3s ease";
     playerhand.style.animation ="player-animation 1.3s ease";
@@ -210,7 +210,7 @@ const dofinish= () => {
     setTimeout(()=> {
         finish.classList.add("fade_in");
         finishname.textContent="出直してきな！";
-    },1000);
+    },600);
     }
 
 };

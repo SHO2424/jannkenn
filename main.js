@@ -77,8 +77,8 @@ const comparehands = (playerChoice,computerChoice)=> {
  
     if(playerChoice === computerChoice) {
         
-            winner.textContent = "わけ";
-            if(winner.textContent = "わけ") {
+            winner.textContent = "It is a tie";
+            if(winner.textContent = "It is a tie") {
                 winner.style.color="white"
             }
             return;
@@ -90,8 +90,8 @@ const comparehands = (playerChoice,computerChoice)=> {
         if(playerChoice === "Rock") {
          
                     if(computerChoice === "Scissors") {
-                        winner.textContent = "やるやん!";
-                        if(winner.textContent = "やるやん!") {
+                        winner.textContent = "You win!";
+                        if(winner.textContent = "You win!") {
                             winner.style.color="#FFD700"
                         }
                         Pscore++;
@@ -99,9 +99,9 @@ const comparehands = (playerChoice,computerChoice)=> {
                         // console.log(winner.textContent);
                         return;
                     }else {
-                        winner.textContent = "ざこ";
+                        winner.textContent = "You lose... ";
                      
-                        if(winner.textContent = "ざこ") {
+                        if(winner.textContent = "You lose...") {
                             winner.style.color="blue"
                     }
                         Cscore++;
@@ -114,16 +114,16 @@ const comparehands = (playerChoice,computerChoice)=> {
     //player Scissors
     if(playerChoice === "Scissors") {
         if(computerChoice === "Rock") {
-            winner.textContent = "ざこ";
-            if(winner.textContent = "ざこ") {
+            winner.textContent = "You lose...";
+            if(winner.textContent = "You lose...") {
                 winner.style.color="blue"
         }
             Cscore++;
             updateScore();
             return;
         }else {
-            winner.textContent = "やるやん!";
-            if(winner.textContent = "やるやん!") {
+            winner.textContent = "You win!";
+            if(winner.textContent = "You win!") {
                 winner.style.color="#FFD700"
             }
             Pscore++;
@@ -134,16 +134,16 @@ const comparehands = (playerChoice,computerChoice)=> {
     //player Paper
     if(playerChoice === "Paper") {
         if(computerChoice === "Scissors") {
-            winner.textContent = "ざこ";
-            if(winner.textContent = "ざこ") {
+            winner.textContent = "You lose...";
+            if(winner.textContent = "You lose...") {
                 winner.style.color="blue"
         }
             Cscore++;
             updateScore();
             return;
         }else {
-            winner.textContent = "やるやん!";
-            if(winner.textContent = "やるやん!") {
+            winner.textContent = "You win!";
+            if(winner.textContent = "You win!") {
                 winner.style.color="#FFD700"
             }
             Pscore++;
@@ -202,14 +202,14 @@ const dofinish= () => {
         match.classList.remove("fade_in");
         setTimeout(()=> {
             finish.classList.add("fade_in");
-            finishname.textContent="あんたの勝ちだよ！";
+            finishname.textContent="You win！";
         },601);
     }
     if(Cscore === 5) { 
     match.classList.remove("fade_in");
     setTimeout(()=> {
         finish.classList.add("fade_in");
-        finishname.textContent="出直してきな！";
+        finishname.textContent="You lose...";
     },601);
     }
 

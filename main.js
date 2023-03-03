@@ -2,9 +2,7 @@ const game = ()=> {
 let Pscore =0;
 let Cscore =0;
 const match =document.querySelector(".match");
-// const three =document.querySelector(".three_btn"); 
-// const five =document.querySelector(".five_btn"); 
-// console.log(five);
+const winner =document.querySelector(".winner");
 const finish =document.querySelector(".finish");
 const finishname =document.querySelector(".finish_name");
 const  startgame =()=> {
@@ -69,7 +67,8 @@ option.addEventListener("click", function() {
 
 
 };
-  const winner =document.querySelector(".winner");
+
+const winner =document.querySelector(".winner");
 const comparehands = (playerChoice,computerChoice)=> {
     
 

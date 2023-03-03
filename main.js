@@ -68,7 +68,7 @@ option.addEventListener("click", function() {
 
 };
 
-const winner =document.querySelector(".winner");
+
 const comparehands = (playerChoice,computerChoice)=> {
     
 

@@ -41,11 +41,11 @@ option.addEventListener("click", function() {
     const computerNumber =Math.floor(Math.random() * 3);
     const computerChoice = computerOptions[computerNumber];
     // console.log(computerChoice);
-
+        winner.style.opacity="0";
     setTimeout(() => {
         
         comparehands(this.textContent,computerChoice);
-        
+        winner.style.opacity="1";
         //hand_img
         // console.log(this.textContent);
         playerhand.src=`img/${this.textContent}.png`;
@@ -69,9 +69,9 @@ option.addEventListener("click", function() {
 
 
 };
-
+  const winner =document.querySelector(".winner");
 const comparehands = (playerChoice,computerChoice)=> {
-    const winner =document.querySelector(".winner");
+    
 
     // console.log(winner);
  
